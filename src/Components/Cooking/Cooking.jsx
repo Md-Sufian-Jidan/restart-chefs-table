@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 
 const Cooking = ({ cook, handlePreparing, prepare }) => {
+    console.log(cook);
     return (
         <div className="w-md border-2 border-[#1E1E1E]">
             <h3 className="my-8 mx-10 text-2xl font-semibold text-[#282828] text-center">Want to cook: {cook?.length}</h3>
@@ -58,7 +59,11 @@ const Cooking = ({ cook, handlePreparing, prepare }) => {
                     </tbody>
                 </table>
             </div>
-
+            {/* total calculation */}
+            <div className='flex flex-col items-end my-5'>
+                <p className='font-medium'>Total Time : {prepare.reduce((p, c) => p + parseFloat(c?.preparing_time.slice(0, 2)), 0)} Minutes</p>
+                <p className='font-medium'>Total Calories : {prepare.reduce((p, c) => p + parseFloat(c?.calories), 0)} Calories</p>
+            </div>
         </div>
     );
 };
