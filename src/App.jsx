@@ -11,24 +11,24 @@ function App() {
 
   const [cook, setCook] = useState([]);
   const [prepare, setPrepare] = useState([]);
-  // const [prepareCart, setPrepareCart] = useState([]);
 
   const handleCook = (recipe) => {
-    setCook([...cook, recipe]);
-    const cooking = [...prepare, cook];
-    const isCook = prepare.find((rec) => (rec?.recipe_id === cook?.recipe_id));
+    const isCook = cook.find((rec) => (rec?.recipe_id === recipe?.recipe_id));
     if (!isCook) {
-      setCook(cooking);
+      const newCook = [...cook, recipe];
+      // console.log('success toast');
+      setCook(newCook);
       return toast.success('Your order is Successfully added');
     }
     else {
+      // console.log('warn toast');
       return toast.warn('Order already Given');
     }
   }
 
   const handlePreparing = (recipe) => {
-    const remaining = cook.find(item => item.recipe_id !== recipe.recipe_id);
-    setCook([remaining]);
+    const remaining = cook.filter((rec) => (rec?.recipe_id !== recipe?.recipe_id));
+    setCook(remaining);
     setPrepare([...prepare, recipe]);
   };
 

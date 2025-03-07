@@ -61,8 +61,8 @@ const Cooking = ({ cook, handlePreparing, prepare }) => {
             </div>
             {/* total calculation */}
             <div className='flex flex-col items-end my-5'>
-                <p className='font-medium'>Total Time : {prepare.reduce((p, c) => p + parseFloat(c?.preparing_time.slice(0, 2)), 0)} Minutes</p>
-                <p className='font-medium'>Total Calories : {prepare.reduce((p, c) => p + parseFloat(c?.calories), 0)} Calories</p>
+                <p className='font-medium'>Total Time : {prepare?.reduce((p, c) => p + parseFloat(c?.preparing_time?.slice(0, 2)), 0)} Minutes</p>
+                <p className='font-medium'>Total Calories : {prepare?.reduce((p, c) => p + parseFloat(c?.calories), 0)} Calories</p>
             </div>
         </div>
     );
