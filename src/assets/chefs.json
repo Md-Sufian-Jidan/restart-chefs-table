@@ -1,0 +1,97 @@
+[
+    {
+        "recipe_id": 1,
+        "recipe_name": "Chicken Stir Fry",
+        "short_description": "A delicious and healthy stir-fry dish with chicken and vegetables.",
+        "image": "https://i.ibb.co/Qmk2pcm/stir-fry-chicken-sweet-peppers-green-beans.jpg",
+        "ingredients": [
+            "550 g chicken breast, sliced",
+            "120 ml soy sauce",
+            "200 g basil leaves",
+            "400 g mushrooms, sliced"
+        ],
+        "preparing_time": "30 minutes",
+        "calories": 350
+    },
+    {
+        "recipe_id": 2,
+        "recipe_name": "Spaghetti Carbonara",
+        "short_description": "A classic Italian pasta dish with bacon, eggs, and cheese.",
+        "image": "https://i.ibb.co/x8HCkKZ/spaghetti-with-mixed-ingredients-white-plate.jpg",
+        "ingredients": [
+            "400 g spaghetti",
+            "200 g pancetta or bacon, diced",
+            "4 large eggs",
+            "100 g grated Parmesan cheese"
+        ],
+        "preparing_time": "25 minutes",
+        "calories": 450
+    },
+    {
+        "recipe_id": 3,
+        "recipe_name": "Vegetable Curry",
+        "short_description": "A flavorful curry made with assorted vegetables and aromatic spices.",
+        "image": "https://i.ibb.co/ZdkL7RN/delicious-pakistani-dish-high-angle.jpg",
+        "ingredients": [
+            "2 potatoes, diced",
+            "1 carrot, sliced",
+            "1 onion, chopped",
+            "200 g cauliflower florets",
+            "250 ml coconut milk",
+            "2 tbsp curry powder",
+            "Salt and pepper to taste"
+        ],
+        "preparing_time": "40 minutes",
+        "calories": 300
+    },
+    {
+        "recipe_id": 4,
+        "recipe_name": "Grilled Salmon",
+        "short_description": "Fresh salmon fillets grilled to perfection with a zesty marinade.",
+        "image": "https://i.ibb.co/NpNTCg6/top-view-grilled-fish-with-lemon-slices.jpg",
+        "ingredients": [
+            "4 salmon fillets",
+            "2 tbsp olive oil",
+            "2 cloves garlic, minced",
+            "1 lemon, juiced",
+            "1 tsp dried thyme",
+            "Salt and pepper to taste"
+        ],
+        "preparing_time": "20 minutes",
+        "calories": 250
+    },
+    {
+        "recipe_id": 5,
+        "recipe_name": "Caprese Salad",
+        "short_description": "A simple and refreshing salad with tomatoes, mozzarella, and basil.",
+        "image": "https://i.ibb.co/VQ9Y2gC/salad-with-cheese-tomatoes.jpg",
+        "ingredients": [
+            "4 ripe tomatoes, sliced",
+            "200 g fresh mozzarella cheese, sliced",
+            "Fresh basil leaves",
+            "2 tbsp balsamic vinegar",
+            "2 tbsp olive oil",
+            "Salt and pepper to taste"
+        ],
+        "preparing_time": "15 minutes",
+        "calories": 200
+    },
+    {
+        "recipe_id": 6,
+        "recipe_name": "Beef Tacos",
+        "short_description": "Tasty tacos filled with seasoned ground beef and your favorite toppings.",
+        "image": "https://i.ibb.co/ChP3sJs/fresh-beef-taco-wooden-table-with-sauce-generative-ai.jpg",
+        "ingredients": [
+            "500 g ground beef",
+            "1 packet taco seasoning",
+            "8 small tortillas",
+            "1 cup shredded lettuce",
+            "1 cup diced tomatoes",
+            "1/2 cup shredded cheddar cheese",
+            "1/4 cup chopped cilantro",
+            "Sour cream and salsa for serving"
+        ],
+        "preparing_time": "35 minutes",
+        "calories": 400
+    }
+]
