@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import { FaStopwatch, FaFire } from "react-icons/fa";
 
-const Recipe = ({ recipe }) => {
+const Recipe = ({ recipe, handleCook }) => {
     const { recipe_name, short_description, image, ingredients, preparing_time, calories } = recipe;
     return (
         <div className="card bg-base-100 w-96 shadow-sm p-5 space-y-3 mx-auto">
@@ -26,11 +27,15 @@ const Recipe = ({ recipe }) => {
                     <p className="flex justify-center items-center gap-1 text-[#282828CC] text-base"><FaFire /> {calories}</p>
                 </div>
                 <div className="card-actions">
-                    <button className="btn bg-[#0BE58A] text-black rounded-full">Want to cook</button>
+                    <button onClick={() => handleCook(recipe)} className="btn bg-[#0BE58A] text-black rounded-full">Want to cook</button>
                 </div>
             </div>
         </div>
     );
 };
 
+Recipe.propTypes = {
+    recipe: PropTypes.object.isRequired,
+    handleCook: PropTypes.func.isRequired,
+}
 export default Recipe;

@@ -7,7 +7,13 @@ import Recipes from './Components/Recipes/Recipes'
 import Cooking from './Components/Cooking/Cooking'
 
 function App() {
-  const [count, setCount] = useState(0);
+
+  const [cook, setCook] = useState([]);
+
+  const handleCook = (recipe) => {
+    setCook([...cook, recipe]);
+    console.log(recipe);
+  }
 
   return (
     <div className='max-w-7xl mx-auto'>
@@ -15,8 +21,8 @@ function App() {
       <Banner></Banner>
       <RecipesHeading></RecipesHeading>
       <div className='lg:flex justify-center gap-5 my-12'>
-        <Recipes></Recipes>
-        <Cooking></Cooking>
+        <Recipes handleCook={handleCook}></Recipes>
+        <Cooking cook={cook}></Cooking>
       </div>
     </div>
   )
