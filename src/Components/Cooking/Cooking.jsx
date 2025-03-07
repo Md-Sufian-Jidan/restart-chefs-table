@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
 
-const Cooking = ({ cook }) => {
+const Cooking = ({ cook, handlePreparing, prepare }) => {
     return (
         <div className="w-md border-2 border-[#1E1E1E]">
-            <h3 className="my-8 mx-10 text-2xl font-semibold text-[#282828] text-center">Want to cook: {cook.length}</h3>
+            <h3 className="my-8 mx-10 text-2xl font-semibold text-[#282828] text-center">Want to cook: {cook?.length}</h3>
+            {/* want to cook table */}
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
@@ -16,25 +17,55 @@ const Cooking = ({ cook }) => {
                             <th></th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="bg-[#28282808]">
                         {/* row 1 */}
                         {
-                            cook.map((recipe, idx) => <tr key={idx}>
+                            cook?.map((recipe, idx) => <tr key={idx}>
                                 <th>{idx + 1}</th>
                                 <td>{recipe?.recipe_name}</td>
                                 <td>{recipe?.preparing_time}</td>
                                 <td>{recipe?.calories}</td>
-                                <td className="btn rounded-full bg-[#0BE58A] text-base font-medium text-[#150B2B]">Preparing</td>
+                                <td onClick={() => handlePreparing(recipe)} className="btn rounded-full bg-[#0BE58A] text-base font-medium text-[#150B2B]">Preparing</td>
                             </tr>)
                         }
                     </tbody>
                 </table>
             </div>
+            {/* Preparing table */}
+            <h3 className="my-8 mx-10 text-2xl font-semibold text-[#282828] text-center">Currently Cooking: {prepare?.length}</h3>
+            <div className="overflow-x-auto">
+                <table className="table">
+                    {/* head */}
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Time</th>
+                            <th>Calories</th>
+                        </tr>
+                    </thead>
+                    <tbody className="bg-[#28282808]">
+                        {/* row 1 */}
+                        {
+                            prepare.map((recipe, idx) => <tr key={idx}>
+                                <th>{idx + 1}</th>
+                                <td>{recipe?.recipe_name}</td>
+                                <td>{recipe?.preparing_time}</td>
+                                <td>{recipe?.calories}</td>
+                                {/* <td onClick={() => handlePreparing(recipe)} className="btn rounded-full bg-[#0BE58A] text-base font-medium text-[#150B2B]">Preparing</td> */}
+                            </tr>)
+                        }
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     );
 };
 
 Cooking.propTypes = {
     cook: PropTypes.array.isRequired,
+    handlePreparing: PropTypes.func.isRequired,
+    prepare: PropTypes.object.isRequired,
 }
 export default Cooking;
