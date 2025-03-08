@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 const Cooking = ({ cook, handlePreparing, prepare }) => {
     console.log(cook);
     return (
-        <div className="w-md border-2 border-[#1E1E1E]">
+        <div className="md:w-md border-2 border-[#1E1E1E] my-5 mx-auto">
             <h3 className="my-8 mx-10 text-2xl font-semibold text-[#282828] text-center">Want to cook: {cook?.length}</h3>
             {/* want to cook table */}
             <div className="overflow-x-auto">
